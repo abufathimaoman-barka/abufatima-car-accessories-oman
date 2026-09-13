@@ -1,16 +1,22 @@
+/* ===================================
+   M Website Creation - Styles
+   =================================== */
+
+/* CSS Variables - Easy to Customize */
+:root {
+    --primary-color: #2c3e50;      /* Dark blue - Main color */
+    --secondary-color: #3498db;    /* Light blue - Accent */
+    --accent-color: #e74c3c;       /* Red - CTA buttons */
+    --text-color: #333;            /* Dark text */
+    --light-bg: #ecf0f1;           /* Light gray background */
+    --white: #fff;                 /* White */
+}
+
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --light-bg: #ecf0f1;
-    --white: #fff;
 }
 
 html {
@@ -29,7 +35,7 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
+/* ===== NAVIGATION ===== */
 .navbar {
     background-color: var(--primary-color);
     color: var(--white);
@@ -68,7 +74,7 @@ body {
     color: var(--secondary-color);
 }
 
-/* Hero Section */
+/* ===== HERO SECTION ===== */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
@@ -105,7 +111,7 @@ body {
     background-color: #c0392b;
 }
 
-/* Services Section */
+/* ===== SERVICES SECTION ===== */
 .services {
     padding: 60px 0;
     background-color: var(--light-bg);
@@ -144,7 +150,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* Portfolio Section */
+/* ===== PORTFOLIO SECTION ===== */
 .portfolio {
     padding: 60px 0;
 }
@@ -195,7 +201,7 @@ body {
     color: #666;
 }
 
-/* About Section */
+/* ===== ABOUT SECTION ===== */
 .about {
     background-color: var(--light-bg);
     padding: 60px 0;
@@ -215,7 +221,7 @@ body {
     line-height: 1.8;
 }
 
-/* Contact Section */
+/* ===== CONTACT SECTION ===== */
 .contact {
     padding: 60px 0;
 }
@@ -266,7 +272,14 @@ body {
     background-color: #2980b9;
 }
 
-/* Footer */
+.form-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+/* ===== FOOTER ===== */
 .footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -274,7 +287,7 @@ body {
     padding: 2rem 0;
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
