@@ -1,0 +1,42 @@
+2026-09-14T15:49:23.9213163Z ##[debug]Evaluating condition for step: 'Auto-assign issue'
+2026-09-14T15:49:23.9233585Z ##[debug]Evaluating: success()
+2026-09-14T15:49:23.9236389Z ##[debug]Evaluating success:
+2026-09-14T15:49:23.9245558Z ##[debug]=> true
+2026-09-14T15:49:23.9249624Z ##[debug]Result: true
+2026-09-14T15:49:23.9265092Z ##[debug]Starting: Auto-assign issue
+2026-09-14T15:49:23.9339169Z ##[debug]Loading inputs
+2026-09-14T15:49:23.9348509Z ##[debug]Evaluating: secrets.GITHUB_TOKEN
+2026-09-14T15:49:23.9349139Z ##[debug]Evaluating Index:
+2026-09-14T15:49:23.9350246Z ##[debug]..Evaluating secrets:
+2026-09-14T15:49:23.9350837Z ##[debug]..=> Object
+2026-09-14T15:49:23.9354085Z ##[debug]..Evaluating String:
+2026-09-14T15:49:23.9354583Z ##[debug]..=> 'GITHUB_TOKEN'
+2026-09-14T15:49:23.9359029Z ##[debug]=> '***'
+2026-09-14T15:49:23.9361990Z ##[debug]Result: '***'
+2026-09-14T15:49:23.9369662Z ##[warning]Unexpected input(s) 'numOfAssignee', valid inputs are ['repo-token', 'assignees']
+2026-09-14T15:49:23.9373789Z ##[debug]Loading env
+2026-09-14T15:49:23.9408414Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-14T15:49:23.9413285Z ##[group]Run pozil/auto-assign-issue@v1
+2026-09-14T15:49:23.9413737Z with:
+2026-09-14T15:49:23.9416025Z   repo-token: ***
+2026-09-14T15:49:23.9416332Z   assignees: abufathimaoman-barka
+2026-09-14T15:49:23.9416667Z   numOfAssignee: 1
+2026-09-14T15:49:23.9417212Z ##[endgroup]
+2026-09-14T15:49:23.9882572Z /home/runner/work/_actions/pozil/auto-assign-issue/v1/src/index.js:12
+2026-09-14T15:49:23.9884269Z         throw new Error(`Couldn't find issue info in current context`);
+2026-09-14T15:49:23.9888320Z               ^
+2026-09-14T15:49:23.9889132Z 
+2026-09-14T15:49:23.9889527Z Error: Couldn't find issue info in current context
+2026-09-14T15:49:23.9890593Z     at run (/home/runner/work/_actions/pozil/auto-assign-issue/v1/src/index.js:12:15)
+2026-09-14T15:49:23.9917062Z     at Object.<anonymous> (/home/runner/work/_actions/pozil/auto-assign-issue/v1/src/index.js:39:5)
+2026-09-14T15:49:23.9925586Z     at Module._compile (node:internal/modules/cjs/loader:1872:14)
+2026-09-14T15:49:23.9926276Z     at Object..js (node:internal/modules/cjs/loader:2003:10)
+2026-09-14T15:49:23.9926864Z     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-09-14T15:49:23.9927601Z     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-09-14T15:49:23.9928256Z     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-09-14T15:49:23.9928941Z     at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+2026-09-14T15:49:23.9929596Z     at node:internal/main/run_main_module:33:47
+2026-09-14T15:49:23.9929938Z 
+2026-09-14T15:49:23.9930138Z Node.js v24.19.0
+2026-09-14T15:49:23.9934224Z ##[debug]Node Action run completed with exit code 1
+2026-09-14T15:49:23.9971736Z ##[debug]Finishing: Auto-assign issue
