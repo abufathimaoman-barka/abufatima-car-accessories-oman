@@ -1,39 +1,37 @@
-// ===================================
-// M Website Creation - JavaScript
-// ===================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Current year
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+  // Mobile menu
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      menuButton.classList.toggle("active");
     });
-});
+  }
 
-// CTA Button - Scroll to contact section
-document.querySelector('.cta-button').addEventListener('click', function() {
-    document.querySelector('#contact').scrollIntoView({
-        behavior: 'smooth'
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+        if (nav) nav.classList.remove("open");
+        if (menuButton) menuButton.classList.remove("active");
+      }
     });
+  });
 });
-
-// Form validation before submission
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    const name = this.querySelector('input[type="text"]').value.trim();
-    const email = this.querySelector('input[type="email"]').value.trim();
-    const message = this.querySelector('textarea').value.trim();
-    
-    if (!name || !email || !message) {
-        e.preventDefault();
-        alert('Please fill out all fields.');
-    }
-});
-
-// Log website status
-console.log('✅ M Website Creation loaded successfully!');
-console.log('📧 To enable contact form: Visit https://formspree.io and update YOUR_FORM_ID');
